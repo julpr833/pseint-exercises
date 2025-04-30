@@ -1,8 +1,10 @@
 Algoritmo integration
 	Definir respuesta Como Caracter;
 	Repetir
+		Limpiar Pantalla
 		Escribir "";
 		Escribir "Seleccione el ejercicio de desea ejecutar";
+		Escribir "O ingrese <salir> para finalizar."
 		Escribir "";
 		Escribir "1. Buscar subcadena";
 		Escribir "2. Eliminar espacios de inicio y final";
@@ -19,43 +21,45 @@ Algoritmo integration
 		
 		Leer respuesta;
 		
-		Segun ConvertirANumero(respuesta) Hacer
-			1: 
+		Segun respuesta Hacer
+			"1": 
 				lookSubstringPosition();
-			2:
+				backToMenu();
+			"2":
 				trim();
-			3:
+				backToMenu();
+			"3":
 				split();
-			4:
-				longest_word()
-			5:
-				sec_to_hour_converter()
-			6:
-				factorial()
-			7:
+				backToMenu();
+			"4":
+				longest_word();
+				backToMenu();
+			"5":
+				sec_to_hour_converter();
+				backToMenu();
+			"6":
+				factorial();
+				backToMenu();
+			"7":
 				perimetro_de_un_triangulo5();
-			8:
+				backToMenu();
+			"8":
 				conversion_temperatura();
-			9:
+				backToMenu();
+			"9":
 				basexaltura();
-			10: 
+				backToMenu();
+			"10": 
 				divisibles_por_7();
-			11:
+				backToMenu();
+			"11":
 				tabla_del_n();
-			12:
+				backToMenu();
+			"12":
 				div_por_3_o_5();
+				backToMenu();
 		FinSegun
-		
-		Repetir
-			Escribir sin saltar "Desea volver al menú principal? [y/n]: "
-			leer sh_salir
-			sh_salir <- Minusculas(sh_salir)
-			si sh_salir <> "n" y sh_salir <> "y" Entonces
-				Escribir "Ingrese una opción válida (y: si, n: no)"
-			FinSi
-		Hasta Que sh_salir == "n" o sh_salir == "y"
-		Limpiar Pantalla
-	Hasta Que Minusculas(respuesta) = "si"
+	Hasta Que Minusculas(respuesta) = "salir"
 FinAlgoritmo
 
 SubAlgoritmo lookSubstringPosition
@@ -262,3 +266,16 @@ SubAlgoritmo div_por_3_o_5
 	Fin Si
 	
 FinSubAlgoritmo
+
+SubAlgoritmo backToMenu
+	Repetir
+		Escribir sin saltar "Desea volver al menú principal? [y]: volver "
+		leer sh_salir
+		sh_salir <- Minusculas(sh_salir)
+		si sh_salir <> "y" Entonces
+			Escribir "Ingrese una opción válida (y: volver)"
+		FinSi
+	Hasta Que sh_salir == "y"
+	Limpiar Pantalla	
+FinSubAlgoritmo
+	
