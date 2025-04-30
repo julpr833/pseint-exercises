@@ -13,9 +13,9 @@ Algoritmo integration
 		Escribir "7. perimetro_de_un_triangulo";
 		Escribir "8. conversion_temperatura";
 		Escribir "9. basexaltura";
-		Escribir "10. Ejercicio JulianMad";
-		Escribir "11. Ejercicio JulianMad";
-		Escribir "12. Ejercicio JulianMad";
+		Escribir "10. divisibles por 7";
+		Escribir "11. Tabla del n";
+		Escribir "12. Divisible por 3 o 5";
 		
 		Leer respuesta;
 		
@@ -38,9 +38,12 @@ Algoritmo integration
 				conversion_temperatura();
 			9:
 				basexaltura();
-			10:
+			10: 
+				divisibles_por_7();
 			11:
+				tabla_del_n();
 			12:
+				div_por_3_o_5();
 		FinSegun
 		
 		Repetir
@@ -200,12 +203,12 @@ SubAlgoritmo conversion_temperatura
 
     Escribir "Ingrese la temperatura en grados Fahrenheit:"  
     Leer f  
-    c = (f - 32) * 5 / 9  
+    c <- (f - 32) * 5 / 9  
     Escribir f, "°F son ", c, "°C"  
     
     Escribir "Ingrese la temperatura en grados Celsius:"  
     Leer c  
-    f = (c * 9 / 5) + 32  
+    f <- (c * 9 / 5) + 32  
     Escribir c, "°C son ", f, "°F"  
 FinSubAlgoritmo
 
@@ -216,5 +219,46 @@ SubAlgoritmo basexaltura
 	Leer altura
 	altura<- (base*altura)
 	Escribir "El area del triangulo es ",altura
+	
+FinSubAlgoritmo
+
+SubAlgoritmo divisibles_por_7
+	Escribir "los numeros divisibles por 7 menores a 100 son:"
+	Para num<-1 Hasta 100 Con Paso 1 Hacer
+		Si num MOD 7 = 0 Entonces
+			Escribir num
+		Fin Si
+	Fin Para
+	
+FinSubAlgoritmo
+
+SubAlgoritmo tabla_del_n
+	Escribir "Ingrese un numero para saber sus 10 primeros multiplos"
+	Leer num
+	Definir n Como Entero
+	Para n<-1 Hasta 10 Con Paso 1 Hacer
+		Escribir num " * " n " = " num * n
+		
+	Fin Para
+	
+FinSubAlgoritmo
+
+SubAlgoritmo div_por_3_o_5
+	Definir num Como Entero
+	Escribir "Ingrese un numero para saber si es divisible por 3 o por 5"
+	leer num
+	Si num MOD 3 = 0 Entonces
+		Si num MOD 5 = 0 Entonces
+			Escribir "Tu numero es divisible por 3 y por 5"
+		SiNo
+			Escribir "Tu numero es divisible por 3"
+		Fin Si
+	SiNo
+		Si num Mod 5 = 0 Entonces
+			Escribir "Tu numero es divisible por 5"
+		SiNo
+			Escribir "Tu numero no es divisible por 3 o 5"
+		Fin Si
+	Fin Si
 	
 FinSubAlgoritmo
