@@ -30,7 +30,7 @@ Algoritmo integration
 			5:
 			6:
 			7:
-				perimetro_de_un_triangulo();
+				perimetro_de_un_triangulo5();
 			8:
 				conversion_temperatura();
 			9:
@@ -51,7 +51,7 @@ SubAlgoritmo lookSubstringPosition
 	encontrado <- Falso;
 	Para i<-1 Hasta Longitud(text) Con Paso 1 Hacer
 		Si Subcadena(text, i, i + Longitud(substring) - 1) = substring Y NO encontrado Entonces
-			Escribir "La posiciÃ³n de la subcadena <", substring, "> dentro del texto es ", i;
+			Escribir "La posición de la subcadena <", substring, "> dentro del texto es ", i;
 			encontrado <- Verdadero;
 		FinSi
 	FinPara
@@ -109,12 +109,12 @@ SubAlgoritmo conversion_temperatura
     Escribir "Ingrese la temperatura en grados Fahrenheit:"  
     Leer f  
     c = (f - 32) * 5 / 9  
-    Escribir f, "Â°F son ", c, "Â°C"  
+    Escribir f, "°F son ", c, "°C"  
     
     Escribir "Ingrese la temperatura en grados Celsius:"  
     Leer c  
     f = (c * 9 / 5) + 32  
-    Escribir c, "Â°C son ", f, "Â°F"  
+    Escribir c, "°C son ", f, "°F"  
 FinSubAlgoritmo
 
 SubAlgoritmo basexaltura
