@@ -10,9 +10,9 @@ Algoritmo integration
 		Escribir "4. Palabra mas larga";
 		Escribir "5. Convertir segundos a hora";
 		Escribir "6. Factorial de un numero";
-		Escribir "7. Ejercicio Gimena";
-		Escribir "8. Ejercicio Gimena";
-		Escribir "9. Ejercicio Gimena";
+		Escribir "7. perimetro_de_un_triangulo";
+		Escribir "8. conversion_temperatura";
+		Escribir "9. basexaltura";
 		Escribir "10. Ejercicio JulianMad";
 		Escribir "11. Ejercicio JulianMad";
 		Escribir "12. Ejercicio JulianMad";
@@ -33,8 +33,11 @@ Algoritmo integration
 			6:
 				factorial()
 			7:
+				perimetro_de_un_triangulo5();
 			8:
+				conversion_temperatura();
 			9:
+				basexaltura();
 			10:
 			11:
 			12:
@@ -51,7 +54,7 @@ SubAlgoritmo lookSubstringPosition
 	encontrado <- Falso;
 	Para i<-1 Hasta Longitud(text) Con Paso 1 Hacer
 		Si Subcadena(text, i, i + Longitud(substring) - 1) = substring Y NO encontrado Entonces
-			Escribir "La posiciÛn de la subcadena <", substring, "> dentro del texto es ", i;
+			Escribir "La posici√≥n de la subcadena <", substring, "> dentro del texto es ", i;
 			encontrado <- Verdadero;
 		FinSi
 	FinPara
@@ -121,13 +124,13 @@ SubAlgoritmo longest_word
 			lw_palabra <- lw_contador
 		FinSi
 		
-		Escribir "La palabra m·s larga es: ", lw_palabra
+		Escribir "La palabra m√°s larga es: ", lw_palabra
 		Repetir
-			Escribir sin saltar "Desea volver al men˙ principal? [y/n]: "
+			Escribir sin saltar "Desea volver al men√∫ principal? [y/n]: "
 			leer lw_salir
 			lw_salir <- Minusculas(lw_salir)
 			si lw_salir <> "n" y lw_salir <> "y" Entonces
-				Escribir "Ingrese una opciÛn v·lida (y: si, n: no)"
+				Escribir "Ingrese una opci√≥n v√°lida (y: si, n: no)"
 			FinSi
 		Hasta Que lw_salir == "n" o lw_salir == "y"
 		Limpiar Pantalla
@@ -176,11 +179,11 @@ SubAlgoritmo sec_to_hour_converter
 		FinSi
 		escribir ""
 		Repetir
-			Escribir sin saltar "Desea volver al men˙ principal? [y/n]: "
+			Escribir sin saltar "Desea volver al men√∫ principal? [y/n]: "
 			leer sh_salir
 			sh_salir <- Minusculas(sh_salir)
 			si sh_salir <> "n" y sh_salir <> "y" Entonces
-				Escribir "Ingrese una opciÛn v·lida (y: si, n: no)"
+				Escribir "Ingrese una opci√≥n v√°lida (y: si, n: no)"
 			FinSi
 		Hasta Que sh_salir == "n" o sh_salir == "y"
 		Limpiar Pantalla
@@ -204,14 +207,44 @@ SubAlgoritmo factorial
 		escribir ft_n, "! = ", ft_res
 		
 		Repetir
-			escribir "Desea volver al men˙ principal? [s/n]: "
+			escribir "Desea volver al men√∫ principal? [s/n]: "
 			leer ft_salir
 			
 			si ft_salir <> "s" y ft_salir <> "n" Entonces
-				escribir "Ingrese una opciÛn v·lida (y: si, n: no)"
+				escribir "Ingrese una opci√≥n v√°lida (y: si, n: no)"
 			FinSi
 		Hasta Que ft_salir == "s" o ft_salir == "n"
 		Limpiar Pantalla
 	Hasta Que ft_salir == "s"
 FinSubAlgoritmo
+
+SubAlgoritmo perimetro_de_un_triangulo5
+	Escribir "Ingresa los tres lados del triangulo"
+	Leer num1, num2, num3
+	perimetro<-(num1+num2+num3)
+	Escribir "El perimetro es ",perimetro
 	
+FinSubAlgoritmo
+
+SubAlgoritmo conversion_temperatura 
+
+    Escribir "Ingrese la temperatura en grados Fahrenheit:"  
+    Leer f  
+    c = (f - 32) * 5 / 9  
+    Escribir f, "¬∞F son ", c, "¬∞C"  
+    
+    Escribir "Ingrese la temperatura en grados Celsius:"  
+    Leer c  
+    f = (c * 9 / 5) + 32  
+    Escribir c, "¬∞C son ", f, "¬∞F"  
+FinSubAlgoritmo
+
+SubAlgoritmo basexaltura
+	Escribir "Ingresa la base del triangulo"
+	Leer base
+	Escribir "Ingresa la altura del triangulo"
+	Leer altura
+	altura<- (base*altura)
+	Escribir "El area del triangulo es ",altura
+	
+FinSubAlgoritmo
