@@ -1,0 +1,5 @@
+Hola como estas?
+Esto es una demostración de un conflicto para la clase de Algoritmo
+Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet.
