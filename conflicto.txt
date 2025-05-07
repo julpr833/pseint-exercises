@@ -3,3 +3,6 @@ Esto es una demostración de un conflicto para la clase de Algoritmo
 En la rama "DevLeandroMesinger" se hace un cambio en la linea 3
 También en la linea 4
 Y en la linea 5
+Lorem ipsum dolor sit amet.asdasdasdasdasd
+Lorem ipsum dolor sit amet. Aasdasdasdadsasd
+Lorem ipsum dolor sit amet.asdasdasdasdasdasdasdasdasdasdas
